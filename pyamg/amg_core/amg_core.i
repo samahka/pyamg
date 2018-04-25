@@ -12,6 +12,7 @@
 #include "smoothed_aggregation.h"
 #include "ruge_stuben.h"
 #include "evolution_strength.h"
+#include "ilu.h"
 %}
 
 %feature("autodoc", "1");
@@ -234,3 +235,15 @@ INSTANTIATE_INDEXDATA(min_blocks)
 
 INSTANTIATE_INDEXDATA_COMPLEX(evolution_strength_helper)
 INSTANTIATE_INDEXDATA_COMPLEX(incomplete_mat_mult_csr)
+
+
+/*----------------------------------------------------------------------------
+  ilu.h
+  ---------------------------------------------------------------------------*/
+%include "ilu.h"
+
+INSTANTIATE_INDEXDATA(ilu_levels)
+INSTANTIATE_INDEXDATA(ilu_sparsity)
+INSTANTIATE_INDEXDATA(ilu_numeric)
+
+
